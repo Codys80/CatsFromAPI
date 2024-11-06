@@ -10,10 +10,6 @@ namespace CatsFromApi
         {
             InitializeComponent();
         }
-        public string createCatText(string input)
-        {
-            return $"https://cataas.com/cat/says/{input}?fontSize=170&fontColor=green";
-        }
         private void OnCatClicked(object sender, EventArgs e)
         {
             string nazwa = (sender as Button).Text;
@@ -29,7 +25,7 @@ namespace CatsFromApi
                     displayCat3.Source = "https://cataas.com/cat";
                     break;
                 case "Kliknij żeby kot TEXT":
-                    displayCatText.Source = createCatText(KotEntry.Text);
+                    displayCatText.Source = $"https://cataas.com/cat/says/{KotEntry.Text}?fontSize=170&fontColor=green";
                     break;
             }
         }
