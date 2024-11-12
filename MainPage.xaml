@@ -1,36 +1,61 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PostCODES.MainPage">
+             x:Class="CatsFromApi.MainPage">
 
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Label x:Name="PostDisplay"
-                   Text=""/>
-            <Button
-                x:Name="PostButton"
-                Text="Kliknij żeby kot pocztowy" 
-                Clicked="OnPostClicked"
-                HorizontalOptions="Fill" />
-            
-            <Entry x:Name="PostEntry"
-                   Placeholder="Podaj kod pocztowy "/>
-            
-            <Button
-                x:Name="PostButtonCity"
-                Text="Kliknij żeby nazwa stanu/miastu" 
-                Clicked="OnPostClickedCity"
-                HorizontalOptions="Fill" />
-            <HorizontalStackLayout>            
-            <Entry x:Name="PostEntryCityState"
-                   Placeholder="Stan w skrócie"/>
-            <Entry x:Name="PostEntryCity"
-                   Placeholder="Miasto "/>
+            <HorizontalStackLayout Spacing="100">
+                <Image
+                    x:Name="displayCat1"
+                    Source="https://cataas.com"
+                    HeightRequest="185"
+                    Aspect="AspectFit"/>
+                <Image
+                    x:Name="displayCat2"
+                    Source="https://cataas.com"
+                    HeightRequest="185"
+                    Aspect="AspectFit"/>
+                <Image
+                    x:Name="displayCat3"
+                    Source="https://cataas.com"
+                    HeightRequest="185"
+                    Aspect="AspectFit"/>
+                <Image
+                    x:Name="displayCatText"
+                    Source="https://cataas.com"
+                    HeightRequest="185"
+                    Aspect="AspectFit"/>
             </HorizontalStackLayout>
+            <Button
+                x:Name="CatButton1"
+                Text="Kliknij żeby kot 1" 
+                Clicked="OnCatClicked"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="CatButton2"
+                Text="Kliknij żeby kot 2" 
+                Clicked="OnCatClicked"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="CatButton3"
+                Text="Kliknij żeby kot 3" 
+                Clicked="OnCatClicked"
+                HorizontalOptions="Fill" />
 
-
+            <HorizontalStackLayout>
+                <Button
+                x:Name="CatButtonText"
+                Text="Kliknij żeby kot TEXT" 
+                Clicked="OnCatClicked"
+                HorizontalOptions="Fill" />
+                
+                <Entry x:Name="KotEntry"
+                   Placeholder="Kot mówi: "/>
+            </HorizontalStackLayout>
+            
         </VerticalStackLayout>
     </ScrollView>
 
